@@ -23,7 +23,7 @@ class Bakery(db.Model, SerializerMixin):
     def __repr__(self):
         return f'<Bakery {self.name}>'
 
-class BakedGood(db.Model, SerializerMixin):
+class BakedGood(db.Model, SerializerMixin):  
     __tablename__ = 'baked_goods'
 
     serialize_rules = ('-bakery.baked_goods',)
